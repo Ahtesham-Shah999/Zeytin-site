@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Zeytin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .menu-hero {
+    background: var(--char);
+    padding: 72px 0 56px;
+    text-align: center;
+  }
+  .menu-hero h1 { color: var(--bone); }
+  .menu-hero p { color: var(--bone-dim); max-width: 560px; margin: 16px auto 0; }
+
+  .menu-nav {
+    position: sticky;
+    top: 73px;
+    background: var(--bone);
+    border-bottom: 1px solid var(--bone-dim);
+    z-index: 50;
+    padding: 16px 0;
+  }
+  .menu-nav .container { display: flex; gap: 28px; overflow-x: auto; }
+  .menu-nav a {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .menu-nav a:hover { color: var(--ember); }
+
+  .menu-section { padding: 64px 0 24px; }
+  .menu-section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+  .menu-section-head h2 { font-size: 1.9rem; }
+  .menu-section-head .count { color: var(--ink-soft); font-size: 0.85rem; }
+
+  .menu-list { display: grid; gap: 0; }
+  .menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--bone-dim);
+  }
+  .menu-item-name { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .menu-item-name h3 { font-size: 1.1rem; font-weight: 600; font-family: var(--font-body); color: var(--char); }
+  .menu-item-desc { grid-column: 1 / 2; font-size: 0.9rem; color: var(--ink-soft); margin-top: 2px; }
+  .menu-item-price { font-weight: 700; color: var(--ember); font-size: 1.05rem; white-space: nowrap; }
+
+  .menu-feature-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 40px 0 0;
+  }
+  .menu-feature-row img { border-radius: 4px; aspect-ratio: 4/3; object-fit: cover; }
+  .menu-feature-row .cap { margin-top: 10px; font-size: 0.9rem; font-weight: 600; color: var(--char); }
+
+  .notice-box {
+    background: var(--bone-dim);
+    border-left: 3px solid var(--brass);
+    padding: 20px 24px;
+    border-radius: 2px;
+    margin: 48px 0;
+  }
+  .notice-box p { font-size: 0.92rem; color: var(--ink-soft); }
+  .notice-box strong { color: var(--char); }
+
+  @media (max-width: 700px) {
+    .menu-feature-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Zey<span>tin</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="reservations.html" class="nav-cta">Reserve a Table</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="menu-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--ember-bright)">The Full Spread</span>
+    <h1 style="margin-top:14px;">Menu</h1>
+    <p>Everything is grilled, baked, or prepared fresh to order. Prices in Pakistani Rupees.</p>
+  </div>
+</section>
+
+<nav class="menu-nav">
+  <div class="container">
+    <a href="#mezze">Mezze & Starters</a>
+    <a href="#soups">Soups & Salads</a>
+    <a href="#mains">Mains & Grill</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#drinks">Drinks</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class="menu-section" id="mezze">
+    <div class="menu-section-head"><h2>Mezze & Starters</h2><span class="count">5 items</span></div>
+    <div class="menu-list">
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Hummus Zeytin</h3><span class="tag tag-vegan">Vegetarian</span></div>
+        <span class="menu-item-price">Rs. 650</span>
+        <p class="menu-item-desc">Classic chickpea hummus topped with toasted pine nuts and chili oil.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Muhammara</h3><span class="tag tag-vegan">Vegan</span></div>
+        <span class="menu-item-price">Rs. 700</span>
+        <p class="menu-item-desc">Roasted red pepper and walnut dip with pomegranate molasses.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Stuffed Vine Leaves (Warak Enab)</h3><span class="tag tag-vegan">Vegan</span></div>
+        <span class="menu-item-price">Rs. 750</span>
+        <p class="menu-item-desc">Rice, herbs, and lemon wrapped in vine leaves, served chilled.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Halloumi Sucuk</h3></div>
+        <span class="menu-item-price">Rs. 850</span>
+        <p class="menu-item-desc">Pan-seared halloumi with spiced beef sucuk and date syrup.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Falafel Plate</h3><span class="tag tag-vegan">Vegan</span></div>
+        <span class="menu-item-price">Rs. 600</span>
+        <p class="menu-item-desc">Six house-made falafel with tahini and pickled turnip.</p>
+      </div>
+    </div>
+    <div class="menu-feature-row">
+      <div><img src="images/hummus.jpg" alt="Hummus Zeytin"><div class="cap">Hummus Zeytin</div></div>
+      <div><img src="images/muhammara.jpg" alt="Muhammara"><div class="cap">Muhammara</div></div>
+      <div><img src="images/falafel.jpg" alt="Falafel Plate"><div class="cap">Falafel Plate</div></div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="soups">
+    <div class="menu-section-head"><h2>Soups & Salads</h2><span class="count">3 items</span></div>
+    <div class="menu-list">
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Lentil Soup (Adas)</h3><span class="tag tag-vegan">Vegan</span></div>
+        <span class="menu-item-price">Rs. 450</span>
+        <p class="menu-item-desc">Slow-cooked red lentil soup with cumin and lemon.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Fattoush</h3><span class="tag tag-vegan">Vegan</span></div>
+        <span class="menu-item-price">Rs. 700</span>
+        <p class="menu-item-desc">Toasted pita, sumac, and seasonal vegetables in a pomegranate dressing.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Zeytin Grill Salad</h3><span class="tag tag-vegan">Vegetarian</span></div>
+        <span class="menu-item-price">Rs. 750</span>
+        <p class="menu-item-desc">Charred vegetables, olives, and feta over greens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="mains">
+    <div class="menu-section-head"><h2>Mains & Grill</h2><span class="count">7 items</span></div>
+    <div class="menu-list">
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Mixed Grill Platter</h3></div>
+        <span class="menu-item-price">Rs. 2,400</span>
+        <p class="menu-item-desc">Lamb kofta, chicken shish, and beef adana with rice and grilled vegetables. Serves 1–2.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Lamb Chops</h3></div>
+        <span class="menu-item-price">Rs. 2,600</span>
+        <p class="menu-item-desc">Charcoal-grilled lamb chops marinated in sumac and garlic.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Chicken Shish Tawook</h3></div>
+        <span class="menu-item-price">Rs. 1,500</span>
+        <p class="menu-item-desc">Marinated chicken skewers with garlic toum and grilled flatbread.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Beef Adana Kebab</h3></div>
+        <span class="menu-item-price">Rs. 1,700</span>
+        <p class="menu-item-desc">Hand-minced spiced beef kebab, served with bulgur pilaf.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Grilled Sea Bass</h3></div>
+        <span class="menu-item-price">Rs. 2,200</span>
+        <p class="menu-item-desc">Whole grilled sea bass with lemon, herbs, and roasted potatoes.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Vegetable Moussaka</h3><span class="tag tag-vegan">Vegetarian</span></div>
+        <span class="menu-item-price">Rs. 1,300</span>
+        <p class="menu-item-desc">Layered eggplant, potato, and tomato bake.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Falafel & Grilled Vegetable Bowl</h3><span class="tag tag-vegan">Vegan</span></div>
+        <span class="menu-item-price">Rs. 1,200</span>
+        <p class="menu-item-desc">Falafel, charred vegetables, hummus, and herbed rice.</p>
+      </div>
+    </div>
+    <div class="menu-feature-row">
+      <div><img src="images/mixed-grill.jpg" alt="Mixed Grill Platter"><div class="cap">Mixed Grill Platter</div></div>
+      <div><img src="images/lamb-chops.jpg" alt="Lamb Chops"><div class="cap">Lamb Chops</div></div>
+      <div><img src="images/shish-tawook.jpg" alt="Chicken Shish Tawook"><div class="cap">Chicken Shish Tawook</div></div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="desserts">
+    <div class="menu-section-head"><h2>Desserts</h2><span class="count">3 items</span></div>
+    <div class="menu-list">
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Baklava (3pc)</h3><span class="tag tag-vegan">Vegetarian</span></div>
+        <span class="menu-item-price">Rs. 500</span>
+        <p class="menu-item-desc">Layered pistachio baklava with rosewater syrup.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Kunafa</h3><span class="tag tag-vegan">Vegetarian</span></div>
+        <span class="menu-item-price">Rs. 650</span>
+        <p class="menu-item-desc">Warm shredded pastry with cheese filling and sugar syrup.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name"><h3>Mastic Ice Cream</h3><span class="tag tag-vegan">Vegetarian</span></div>
+        <span class="menu-item-price">Rs. 400</span>
+        <p class="menu-item-desc">House-made mastic-flavored ice cream.</p>
+      </div>
+    </div>
+    <div class="menu-feature-row">
+      <div><img src="images/baklava.jpg" alt="Baklava"><div class="cap">Baklava</div></div>
+      <div><img src="images/kunafa.jpg" alt="Kunafa"><div class="cap">Kunafa</div></div>
+      <div><img src="images/fattoush.jpg" alt="Fattoush"><div class="cap">Fattoush</div></div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="drinks">
+    <div class="menu-section-head"><h2>Drinks</h2><span class="count">5 items</span></div>
+    <div class="menu-list">
+      <div class="menu-item"><div class="menu-item-name"><h3>Fresh Mint Lemonade</h3></div><span class="menu-item-price">Rs. 350</span></div>
+      <div class="menu-item"><div class="menu-item-name"><h3>Ayran</h3></div><span class="menu-item-price">Rs. 250</span></div>
+      <div class="menu-item"><div class="menu-item-name"><h3>Turkish Tea</h3></div><span class="menu-item-price">Rs. 200</span></div>
+      <div class="menu-item"><div class="menu-item-name"><h3>Turkish Coffee</h3></div><span class="menu-item-price">Rs. 350</span></div>
+      <div class="menu-item"><div class="menu-item-name"><h3>Fresh Juice (seasonal)</h3></div><span class="menu-item-price">Rs. 400</span></div>
+    </div>
+  </section>
+
+  <div class="notice-box">
+    <p><strong>Dietary notes:</strong> No alcohol is served. Most main courses can be prepared without dairy on request. We are not a certified nut-free kitchen — please inform your server of any severe allergies before ordering.</p>
+    <p style="margin-top:8px;"><strong>Kids' menu:</strong> A simplified platter (grilled chicken strips, fries, and a soft drink) is available for Rs. 650 — just ask your server, it isn't listed on the printed menu.</p>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 style="color:var(--ember-bright);">Zeytin</h4>
+        <p style="max-width:280px;">Wood-fired Mediterranean & Levantine grill on Canal View Road, Faisalabad.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="reservations.html">Reservations</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>14 Canal View Road<br>Faisalabad, Punjab</p>
+        <p>+92 41 8765 432</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Wed: 12 PM – 11 PM</p>
+        <p>Thu: 12 PM – 11:30 PM</p>
+        <p>Fri–Sat: 12 PM – 12 AM</p>
+        <p>Sun: 1 PM – 11 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zeytin Restaurant. Demo site for AI agent testing.</span>
+      <span>Faisalabad, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<div id="n8n-chat-widget-placeholder"></div>
+<script src="js/chat-widget.js"></script>
+
+</body>
+</html>

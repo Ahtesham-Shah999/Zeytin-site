@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeytin — Wood-Fired Mediterranean Grill, Faisalabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(196,98,45,0.35), transparent 70%), var(--char);
+    overflow: hidden;
+  }
+  .ember-glow {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(224,122,62,0.55) 0%, rgba(196,98,45,0.25) 35%, transparent 70%);
+    filter: blur(20px);
+    animation: embergrow 6s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+  @keyframes embergrow {
+    0% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+    100% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+  }
+  .ember-particle {
+    position: absolute;
+    bottom: 10%;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--ember-bright);
+    opacity: 0;
+    animation: rise 4.5s ease-in infinite;
+  }
+  @keyframes rise {
+    0% { opacity: 0; transform: translateY(0) scale(1); }
+    15% { opacity: 0.9; }
+    100% { opacity: 0; transform: translateY(-420px) scale(0.3); }
+  }
+  .hero-inner { position: relative; z-index: 2; padding-top: 40px; }
+  .hero h1 { color: var(--bone); max-width: 760px; }
+  .hero h1 em { font-style: italic; color: var(--ember-bright); }
+  .hero .lede { color: var(--bone-dim); margin: 24px 0 36px; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-meta {
+    display: flex; gap: 40px; margin-top: 64px; flex-wrap: wrap;
+  }
+  .hero-meta div { color: var(--bone-dim); font-size: 0.85rem; }
+  .hero-meta strong { display: block; color: var(--bone); font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; }
+
+  .intro-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .intro-split img { border-radius: 4px; aspect-ratio: 4/5; object-fit: cover; }
+
+  .dish-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .dish-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--bone-dim);
+  }
+  .dish-card img { aspect-ratio: 4/3; object-fit: cover; }
+  .dish-card .dc-body { padding: 20px 22px 24px; }
+  .dish-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .dish-card .price { color: var(--ember); font-weight: 600; font-family: var(--font-body); }
+  .dish-card p { font-size: 0.92rem; margin-top: 8px; }
+
+  .strip {
+    background: var(--olive);
+    color: var(--bone);
+    padding: 56px 0;
+  }
+  .strip .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .strip h2 { color: var(--bone); font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .strip p { color: rgba(242,237,228,0.85); }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--bone-dim);
+    border-radius: 4px;
+    padding: 28px;
+  }
+  .testi-card .stars { color: var(--ember); letter-spacing: 2px; margin-bottom: 12px; }
+  .testi-card p { font-size: 0.95rem; }
+  .testi-card .who { margin-top: 16px; font-weight: 600; color: var(--char); font-size: 0.88rem; }
+
+  @media (max-width: 860px) {
+    .intro-split, .dish-row, .testi-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Zey<span>tin</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="reservations.html" class="nav-cta">Reserve a Table</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="ember-glow"></div>
+  <div class="ember-particle" style="left:42%; animation-delay:0s;"></div>
+  <div class="ember-particle" style="left:48%; animation-delay:1.2s;"></div>
+  <div class="ember-particle" style="left:55%; animation-delay:2.1s;"></div>
+  <div class="ember-particle" style="left:38%; animation-delay:3s;"></div>
+  <div class="ember-particle" style="left:60%; animation-delay:0.6s;"></div>
+  <div class="container hero-inner">
+    <span class="eyebrow" style="color:var(--ember-bright)">Faisalabad's Wood-Fired Table</span>
+    <h1 style="margin-top:18px;">Grilled over <em>charcoal</em>,<br>rooted in the Levant.</h1>
+    <p class="lede">Mezze, kebabs, and slow-grilled mains, cooked the way they've always been — over real fire, family style, on Canal View Road.</p>
+    <div class="hero-ctas">
+      <a href="reservations.html" class="btn btn-primary">Reserve a Table</a>
+      <a href="menu.html" class="btn btn-outline-light">View Menu</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>12–11 PM</strong>Open daily</div>
+      <div><strong>Rs. 1,200–2,500</strong>Per person</div>
+      <div><strong>Canal View Rd</strong>Faisalabad</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container intro-split">
+    <div>
+      <span class="eyebrow">Since 2021</span>
+      <h2 style="margin:14px 0 22px;">A grill station, not a kitchen.</h2>
+      <p style="font-size:1.05rem; margin-bottom:18px;">Zeytin opened with one rule: nothing leaves the grill unless it's been over real charcoal. No shortcuts, no gas flame standing in for fire. Our cooks learned the trade in Levantine and Anatolian kitchens, and it shows in every skewer.</p>
+      <p style="font-size:1.05rem;">Sixty-four seats inside, eight more on the terrace when the weather agrees. Come for a quiet weeknight dinner or bring the whole table for a Friday night feast.</p>
+      <a href="about.html" class="btn btn-outline" style="margin-top:28px;">Our Story</a>
+    </div>
+    <img src="images/grill-station.jpg" alt="Open charcoal grill at Zeytin">
+  </div>
+</section>
+
+<section style="background:var(--bone-dim);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">From the Grill</span>
+      <h2 style="margin-top:14px;">A few favorites</h2>
+    </div>
+    <div class="dish-row">
+      <div class="dish-card">
+        <img src="images/mixed-grill.jpg" alt="Mixed Grill Platter">
+        <div class="dc-body">
+          <h3>Mixed Grill Platter</h3>
+          <span class="price">Rs. 2,400</span>
+          <p>Lamb kofta, chicken shish, and beef adana with rice and grilled vegetables.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="images/lamb-chops.jpg" alt="Lamb Chops">
+        <div class="dc-body">
+          <h3>Lamb Chops</h3>
+          <span class="price">Rs. 2,600</span>
+          <p>Charcoal-grilled, marinated in sumac and garlic.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="images/hummus.jpg" alt="Hummus Zeytin">
+        <div class="dc-body">
+          <h3>Hummus Zeytin</h3>
+          <span class="price">Rs. 650</span>
+          <p>Toasted pine nuts, chili oil, and warm flatbread.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="menu.html" class="btn btn-outline">See Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="container">
+    <div>
+      <h2>Booking takes less than a minute.</h2>
+      <p>Chat with us right on this site — tell us the day, the time, and the size of your table.</p>
+    </div>
+    <a href="reservations.html" class="btn" style="background:var(--bone); color:var(--char);">Reserve Now</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What Guests Say</span>
+      <h2 style="margin-top:14px;">Word of mouth</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"The lamb chops alone are worth the drive across town. Smoky in exactly the right way."</p>
+        <div class="who">— Ayesha R.</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Booked a table for eight on a Friday with no hassle. Food came out hot, fast, and generous."</p>
+        <div class="who">— Bilal K.</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Hummus and muhammara are better than places twice the price. Terrace seating is lovely in winter."</p>
+        <div class="who">— Sana M.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 style="color:var(--ember-bright);">Zeytin</h4>
+        <p style="max-width:280px;">Wood-fired Mediterranean & Levantine grill on Canal View Road, Faisalabad. Open daily, no reservation required — but recommended.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="reservations.html">Reservations</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>14 Canal View Road<br>Faisalabad, Punjab</p>
+        <p>+92 41 8765 432</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Wed: 12 PM – 11 PM</p>
+        <p>Thu: 12 PM – 11:30 PM</p>
+        <p>Fri–Sat: 12 PM – 12 AM</p>
+        <p>Sun: 1 PM – 11 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zeytin Restaurant. Demo site for AI agent testing.</span>
+      <span>Faisalabad, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Chat widget mount point — n8n chat widget will attach here -->
+<div id="n8n-chat-widget-placeholder"></div>
+<script src="js/chat-widget.js"></script>
+
+</body>
+</html>

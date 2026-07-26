@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Zeytin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .about-hero {
+    background: var(--char);
+    padding: 80px 0 64px;
+  }
+  .about-hero .container { max-width: 760px; }
+  .about-hero h1 { color: var(--bone); }
+  .about-hero p { color: var(--bone-dim); margin-top: 18px; font-size: 1.1rem; }
+
+  .story-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .story-row img { border-radius: 4px; aspect-ratio: 4/3; object-fit: cover; }
+  .story-row.reverse { direction: rtl; }
+  .story-row.reverse > * { direction: ltr; }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .value-card { padding: 8px 0; }
+  .value-card .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--ember); font-weight: 500; }
+  .value-card h3 { margin: 12px 0 8px; }
+  .value-card p { font-size: 0.95rem; }
+
+  .stat-strip {
+    background: var(--olive);
+    color: var(--bone);
+  }
+  .stat-strip .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 56px 0;
+    text-align: center;
+  }
+  .stat-strip strong { display: block; font-family: var(--font-display); font-size: 2.4rem; font-weight: 500; color: var(--bone); }
+  .stat-strip span { font-size: 0.82rem; color: rgba(242,237,228,0.85); }
+
+  .amenity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px; margin-top: 24px; }
+  .amenity-list div { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; }
+  .amenity-list div::before { content: '✓'; color: var(--olive); font-weight: 700; flex-shrink: 0; }
+
+  @media (max-width: 860px) {
+    .story-row, .values-grid { grid-template-columns: 1fr; }
+    .story-row.reverse { direction: ltr; }
+    .stat-strip .container { grid-template-columns: 1fr 1fr; }
+    .amenity-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Zey<span>tin</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="reservations.html" class="nav-cta">Reserve a Table</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="about-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--ember-bright)">Our Story</span>
+    <h1 style="margin-top:14px;">Fire first, everything else second.</h1>
+    <p>Zeytin opened on Canal View Road in 2021 with a single charcoal grill and a short menu. Five years later, the grill is still the heart of the room — we just got better at everything around it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container story-row">
+    <div>
+      <span class="eyebrow">2021</span>
+      <h2 style="margin:14px 0 18px;">Why "Zeytin"</h2>
+      <p style="margin-bottom:14px;">Zeytin means olive — in Turkish, and close to its cousins across the Levant. It's a small word that shows up in nearly every dish we serve: in the oil, the brine, the garnish. We named the restaurant after the ingredient that quietly does the most work.</p>
+      <p>Our founders trained in Levantine and Anatolian grill kitchens before bringing that style home to Faisalabad — built around one rule: nothing leaves the grill unless it's been over real charcoal.</p>
+    </div>
+    <img src="images/chef-grill.jpg" alt="Chef at the charcoal grill">
+  </div>
+</section>
+
+<section style="background:var(--bone-dim);">
+  <div class="container story-row reverse">
+    <div>
+      <span class="eyebrow">The Room</span>
+      <h2 style="margin:14px 0 18px;">Sixty-four seats, one open flame</h2>
+      <p style="margin-bottom:14px;">The dining room is built around the grill station, not away from it — guests can watch skewers turn over charcoal from most tables. Warm wood, brass fixtures, low light in the evenings.</p>
+      <p>Eight more seats sit on a small outdoor terrace, open whenever the weather allows it.</p>
+    </div>
+    <img src="images/interior-1.jpg" alt="Zeytin dining room interior">
+  </div>
+</section>
+
+<section class="stat-strip">
+  <div class="container">
+    <div><strong>2021</strong><span>Year established</span></div>
+    <div><strong>64</strong><span>Indoor seats</span></div>
+    <div><strong>8</strong><span>Terrace seats</span></div>
+    <div><strong>100%</strong><span>Charcoal-grilled</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head" style="margin:0 auto 48px; text-align:center;">
+      <span class="eyebrow">What We Stand For</span>
+      <h2 style="margin-top:14px;">Three things we don't compromise on</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="num">01</span>
+        <h3>Real charcoal, every time</h3>
+        <p>No gas flame stands in for fire here. Every skewer, chop, and vegetable touches real charcoal before it reaches the table.</p>
+      </div>
+      <div class="value-card">
+        <span class="num">02</span>
+        <h3>Cooked to order, not held</h3>
+        <p>Nothing sits under a heat lamp. Tickets go to the grill when you order, which means a short wait for a hot plate.</p>
+      </div>
+      <div class="value-card">
+        <span class="num">03</span>
+        <h3>A table for everyone</h3>
+        <p>Vegetarian and vegan options sit on the same menu as the grill, not a separate apologetic insert. Kids eat well too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bone-dim);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Good to Know</span>
+      <h2 style="margin-top:14px;">Amenities & practical details</h2>
+    </div>
+    <div class="amenity-list">
+      <div>Free parking for around 12 cars outside, plus street parking</div>
+      <div>High chairs available, simplified kids' platter on request</div>
+      <div>Smart casual — no formal dress code</div>
+      <div>Outside cakes welcome for celebrations, no cutting fee</div>
+      <div>No alcohol served</div>
+      <div>Takeaway available by phone or WhatsApp — no delivery yet</div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 style="color:var(--ember-bright);">Zeytin</h4>
+        <p style="max-width:280px;">Wood-fired Mediterranean & Levantine grill on Canal View Road, Faisalabad.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="reservations.html">Reservations</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>14 Canal View Road<br>Faisalabad, Punjab</p>
+        <p>+92 41 8765 432</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Wed: 12 PM – 11 PM</p>
+        <p>Thu: 12 PM – 11:30 PM</p>
+        <p>Fri–Sat: 12 PM – 12 AM</p>
+        <p>Sun: 1 PM – 11 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zeytin Restaurant. Demo site for AI agent testing.</span>
+      <span>Faisalabad, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<div id="n8n-chat-widget-placeholder"></div>
+<script src="js/chat-widget.js"></script>
+
+</body>
+</html>

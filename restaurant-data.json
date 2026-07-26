@@ -1,0 +1,103 @@
+{
+  "_note": "This file is the single source of truth for both the website content and (later) the chatbot's grounded knowledge base. Keep it in sync — when the owner changes a price or hours, edit it here once.",
+
+  "business": {
+    "name": "Zeytin",
+    "tagline": "Wood-fired Mediterranean & Levantine grill",
+    "type": "restaurant",
+    "phone": "+92 41 8765 432",
+    "whatsapp": "+92 300 1234567",
+    "email": "hello@zeytintable.com",
+    "address": "14 Canal View Road, Faisalabad, Punjab, Pakistan",
+    "established": 2021,
+    "seating_capacity": 64,
+    "price_range": "Rs. 1,200 \u2013 2,500 per person",
+    "cuisine": "Mediterranean, Levantine, Turkish grill",
+    "ambience": "Warm, wood-and-brass interior with an open charcoal grill station, indoor seating plus a small outdoor terrace (8 tables, weather permitting)"
+  },
+
+  "hours": {
+    "monday": "12:00 PM \u2013 11:00 PM",
+    "tuesday": "12:00 PM \u2013 11:00 PM",
+    "wednesday": "12:00 PM \u2013 11:00 PM",
+    "thursday": "12:00 PM \u2013 11:30 PM",
+    "friday": "12:00 PM \u2013 12:00 AM",
+    "saturday": "12:00 PM \u2013 12:00 AM",
+    "sunday": "1:00 PM \u2013 11:00 PM",
+    "kitchen_last_order": "30 minutes before closing",
+    "notes": "Closed on the first Monday of every month for deep cleaning."
+  },
+
+  "booking_policy": {
+    "advance_booking_days": 14,
+    "min_party_size": 1,
+    "max_party_size_online": 10,
+    "large_party_note": "Parties of 11 or more must call or WhatsApp the restaurant directly to arrange a private setup.",
+    "deposit_required": false,
+    "hold_time_minutes": 15,
+    "hold_time_note": "Tables are held for 15 minutes past the reservation time before being released.",
+    "cancellation_policy": "Cancel or reschedule up to 2 hours before your reservation with no charge.",
+    "outdoor_seating_note": "Terrace seating is weather-dependent and cannot be guaranteed in advance."
+  },
+
+  "menu": {
+    "mezze_starters": [
+      { "name": "Hummus Zeytin", "price": 650, "desc": "Classic chickpea hummus topped with toasted pine nuts and chili oil", "dietary": ["vegetarian", "vegan option without butter"] },
+      { "name": "Muhammara", "price": 700, "desc": "Roasted red pepper and walnut dip with pomegranate molasses", "dietary": ["vegetarian", "vegan"] },
+      { "name": "Stuffed Vine Leaves (Warak Enab)", "price": 750, "desc": "Rice, herbs, and lemon wrapped in vine leaves, served chilled", "dietary": ["vegan"] },
+      { "name": "Halloumi Sucuk", "price": 850, "desc": "Pan-seared halloumi with spiced beef sucuk and date syrup", "dietary": [] },
+      { "name": "Falafel Plate", "price": 600, "desc": "Six house-made falafel with tahini and pickled turnip", "dietary": ["vegan"] }
+    ],
+    "soups_salads": [
+      { "name": "Lentil Soup (Adas)", "price": 450, "desc": "Slow-cooked red lentil soup with cumin and lemon", "dietary": ["vegan"] },
+      { "name": "Fattoush", "price": 700, "desc": "Toasted pita, sumac, and seasonal vegetables in a pomegranate dressing", "dietary": ["vegan"] },
+      { "name": "Zeytin Grill Salad", "price": 750, "desc": "Charred vegetables, olives, and feta over greens", "dietary": ["vegetarian"] }
+    ],
+    "mains_grill": [
+      { "name": "Mixed Grill Platter", "price": 2400, "desc": "Lamb kofta, chicken shish, and beef adana with rice and grilled vegetables (serves 1\u20132)", "dietary": [] },
+      { "name": "Lamb Chops", "price": 2600, "desc": "Charcoal-grilled lamb chops marinated in sumac and garlic", "dietary": [] },
+      { "name": "Chicken Shish Tawook", "price": 1500, "desc": "Marinated chicken skewers with garlic toum and grilled flatbread", "dietary": [] },
+      { "name": "Beef Adana Kebab", "price": 1700, "desc": "Hand-minced spiced beef kebab, served with bulgur pilaf", "dietary": [] },
+      { "name": "Grilled Sea Bass", "price": 2200, "desc": "Whole grilled sea bass with lemon, herbs, and roasted potatoes", "dietary": [] },
+      { "name": "Vegetable Moussaka", "price": 1300, "desc": "Layered eggplant, potato, and tomato bake", "dietary": ["vegetarian"] },
+      { "name": "Falafel & Grilled Vegetable Bowl", "price": 1200, "desc": "Falafel, charred vegetables, hummus, and herbed rice", "dietary": ["vegan"] }
+    ],
+    "desserts": [
+      { "name": "Baklava (3pc)", "price": 500, "desc": "Layered pistachio baklava with rosewater syrup", "dietary": ["vegetarian"] },
+      { "name": "Kunafa", "price": 650, "desc": "Warm shredded pastry with cheese filling and sugar syrup", "dietary": ["vegetarian"] },
+      { "name": "Mastic Ice Cream", "price": 400, "desc": "House-made mastic-flavored ice cream", "dietary": ["vegetarian"] }
+    ],
+    "drinks": [
+      { "name": "Fresh Mint Lemonade", "price": 350, "desc": "", "dietary": ["vegan"] },
+      { "name": "Ayran", "price": 250, "desc": "Salted yogurt drink", "dietary": ["vegetarian"] },
+      { "name": "Turkish Tea", "price": 200, "desc": "", "dietary": ["vegan"] },
+      { "name": "Turkish Coffee", "price": 350, "desc": "", "dietary": ["vegan"] },
+      { "name": "Fresh Juice (seasonal)", "price": 400, "desc": "Ask server for today's selection", "dietary": ["vegan"] }
+    ],
+    "dietary_notes": "No alcohol is served. We can prepare most main courses without dairy on request. We are not a certified nut-free kitchen \u2014 please inform your server of any severe allergies before ordering.",
+    "kids_menu": "A simplified kids' platter (grilled chicken strips, fries, and a soft drink) is available for Rs. 650, not listed on the main menu \u2014 just ask."
+  },
+
+  "services_offered": [
+    "Dine-in",
+    "Takeaway (order by phone or WhatsApp)",
+    "Private terrace booking for groups of 6\u201310 (subject to availability)",
+    "Birthday/celebration setups (mention when booking \u2014 simple table decoration, no charge, 48 hours notice required)"
+  ],
+
+  "things_not_offered": [
+    "No delivery service at this time (takeaway/pickup only)",
+    "No alcohol",
+    "No outdoor catering / off-site events",
+    "No walk-in guarantee during weekend dinner hours \u2014 booking strongly recommended Thu\u2013Sat evenings"
+  ],
+
+  "faqs": [
+    { "q": "Is parking available?", "a": "Yes, free parking for around 12 cars directly outside the restaurant, plus street parking on Canal View Road." },
+    { "q": "Is the restaurant family-friendly?", "a": "Yes, high chairs are available and there is a simple kids' platter on request." },
+    { "q": "Do you take walk-ins?", "a": "Yes, but a table can't be guaranteed without a reservation, especially Thursday to Saturday evenings." },
+    { "q": "Is there a dress code?", "a": "No formal dress code \u2014 smart casual is typical." },
+    { "q": "Do you serve alcohol?", "a": "No, Zeytin does not serve alcohol." },
+    { "q": "Can I bring a cake for a birthday?", "a": "Yes, outside cakes are welcome with no cake-cutting fee. Please let the staff know when you arrive." }
+  ]
+}
